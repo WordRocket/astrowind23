@@ -22,7 +22,7 @@ const {
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
   <div class="max-w-4xl mx-auto space-y-4">
     {items && items.map((item, index) => (
-      <div class={`faq-item intersect-once intersect-quarter motion-safe:opacity-0 motion-safe:intersect:animate-slide-up`} style={`animation-delay: ${(index + 1) * 0.1}s`}>
+      <div class={`faq-item animate-slide-up`} style={`animation-delay: ${(index + 1) * 0.1}s`}>
         <div class="flex items-start space-x-4">
           <div class="icon-container flex-shrink-0 bg-primary-500/20 border-primary-500/30">
             <Icon name="tabler:help-circle" class="w-5 h-5 text-primary-400" />

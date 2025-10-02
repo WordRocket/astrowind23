@@ -75,11 +75,11 @@ export default {
       },
 
       animation: {
-        'fade': 'fadeInUp 1s both',
+        'fade': 'fadeInUp 0.8s ease-out forwards',
         'slide-up': 'slideInUp 0.6s ease-out',
         'slide-left': 'slideInLeft 0.6s ease-out',
         'slide-right': 'slideInRight 0.6s ease-out',
-        'scale-in': 'scaleIn 0.5s ease-out',
+        'scale-in': 'scaleIn 0.6s ease-out',
         'float': 'float 3s ease-in-out infinite',
         'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
         'shimmer': 'shimmer 2s infinite',
@@ -88,7 +88,7 @@ export default {
 
       keyframes: {
         fadeInUp: {
-          '0%': { opacity: 0, transform: 'translateY(2rem)' },
+          '0%': { opacity: 0, transform: 'translateY(30px)' },
           '100%': { opacity: 1, transform: 'translateY(0)' },
         },
         slideInUp: {
