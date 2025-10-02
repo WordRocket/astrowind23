@@ -44,6 +44,7 @@ const {
   <div class="mx-auto max-w-7xl p-4 md:px-8">
     <div class={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16`}>
       <div class="md:basis-1/2 self-center intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-slide-left">
+      <div class="md:basis-1/2 self-center intersect-once intersect-quarter motion-safe:opacity-0 motion-safe:intersect:animate-slide-left">
         {content && <div class="mb-12 text-lg dark:text-slate-400" set:html={content} />}
 
         {
@@ -56,7 +57,7 @@ const {
 
         <div class="space-y-6">
           {items && items.map((item, index) => (
-            <div class={`flex items-start space-x-4 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-slide-left`} style={`animation-delay: ${(index + 1) * 0.1}s`}>
+            <div class={`flex items-start space-x-4 intersect-once intersect-quarter motion-safe:opacity-0 motion-safe:intersect:animate-slide-left`} style={`animation-delay: ${(index + 1) * 0.1}s`}>
               <div class="icon-container flex-shrink-0 bg-green-500/20 border-green-500/30">
                 <Icon name={item.icon || "tabler:check"} class="w-5 h-5 text-success" />
               </div>
@@ -68,7 +69,7 @@ const {
           ))}
         </div>
       </div>
-      <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-slide-right">
+      <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2 intersect-once intersect-quarter motion-safe:opacity-0 motion-safe:intersect:animate-slide-right">
         {
           image && (
             <div class="relative m-auto max-w-4xl">

@@ -25,7 +25,7 @@ const {
   <Headline title={title} subtitle={subtitle} tagline={tagline} classes={classes?.headline as Record<string, string>} />
   <div class="modern-grid">
     {items && items.map((item, index) => (
-      <div class={`modern-card p-8 text-center intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-scale-in`} style={`animation-delay: ${(index + 1) * 0.1}s`}>
+      <div class={`modern-card p-8 text-center intersect-once intersect-quarter motion-safe:opacity-0 motion-safe:intersect:animate-scale-in`} style={`animation-delay: ${(index + 1) * 0.1}s`}>
         <div class="icon-container-large mx-auto mb-6 bg-primary-500/20 border-primary-500/30">
           <Icon name={item.icon || defaultIcon} class="w-8 h-8 text-primary-400" />
         </div>
