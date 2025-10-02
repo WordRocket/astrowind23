@@ -1,0 +1,207 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Content from '~/components/widgets/Content.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Case Studies - WordRocket Success Stories',
+  description: 'Discover how businesses and content creators are using WordRocket to scale their content marketing, improve SEO rankings, and save time.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+  <HeroText
+    tagline="Case Studies"
+    title="Real Results from Real Users"
+    subtitle="Discover how businesses and content creators are using WordRocket to transform their content marketing strategy and achieve remarkable results."
+  />
+
+  <!-- Content Widget **************** -->
+  <Content
+    isReversed
+    items={[
+      {
+        title: '300% Increase in Content Output',
+        description: 'Reduced content creation time from 4 hours to 45 minutes per article while maintaining high quality standards.',
+        icon: 'tabler:trending-up',
+      },
+      {
+        title: '65% Improvement in SEO Rankings',
+        description: 'Better keyword optimization and content structure led to significant improvements in search engine visibility.',
+        icon: 'tabler:seo',
+      },
+      {
+        title: '$50K+ in Time Savings',
+        description: 'Eliminated the need for expensive freelance writers while producing more content than ever before.',
+        icon: 'tabler:currency-dollar',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Growth Marketing Inc Dashboard',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Growth Marketing Inc: Scaling Content Operations
+      </h3>
+      <p class="text-muted mb-4">
+        A mid-sized marketing agency struggling to meet client content demands discovered WordRocket and transformed their entire content creation process.
+      </p>
+      <p class="text-sm text-muted">
+        "WordRocket didn't just help us create more content—it helped us create better content. Our clients are seeing real results, and we're able to take on more projects than ever before." - Sarah Johnson, Content Director
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+  <Content
+    items={[
+      {
+        title: '43% Increase in Organic Traffic',
+        description: 'Better SEO optimization and consistent publishing schedule led to significant traffic growth.',
+        icon: 'tabler:trending-up',
+      },
+      {
+        title: '80% Reduction in Content Costs',
+        description: 'Eliminated expensive content agencies and freelancers while improving content quality.',
+        icon: 'tabler:currency-dollar-off',
+      },
+      {
+        title: '5x Faster Content Production',
+        description: 'From idea to published article in under 30 minutes instead of several days.',
+        icon: 'tabler:clock-fast',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80',
+      alt: 'TechStartup Analytics Dashboard',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        TechStartup: From Zero to SEO Hero
+      </h3>
+      <p class="text-muted mb-4">
+        A solo entrepreneur with no content marketing experience used WordRocket to build a successful content strategy that drives consistent organic traffic.
+      </p>
+      <p class="text-sm text-muted">
+        "I went from publishing one article per month to publishing daily. WordRocket made content creation so simple that I actually look forward to it now." - Michael Chen, Founder
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+  <Content
+    isReversed
+    items={[
+      {
+        title: '200% More Client Acquisitions',
+        description: 'High-quality content attracted more potential clients and established thought leadership.',
+        icon: 'tabler:users-plus',
+      },
+      {
+        title: '90% Time Savings',
+        description: 'Automated content creation process freed up time for client work and business development.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Industry Recognition',
+        description: 'Consistent, high-quality content led to speaking opportunities and industry awards.',
+        icon: 'tabler:award',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Digital Solutions Team',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Digital Solutions: Building Authority Through Content
+      </h3>
+      <p class="text-muted mb-4">
+        A digital marketing consultancy used WordRocket to establish thought leadership and attract high-value clients through consistent, expert-level content.
+      </p>
+      <p class="text-sm text-muted">
+        "WordRocket helped us punch above our weight. Our content now competes with much larger agencies, and clients see us as the experts we are." - Emma Rodriguez, SEO Specialist
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Stats Widget ****************** -->
+  <Stats
+    title="Aggregate Results Across All Case Studies"
+    stats={[
+      { title: 'Average Traffic Increase', amount: '156%' },
+      { title: 'Time Savings', amount: '78%' },
+      { title: 'Cost Reduction', amount: '65%' },
+      { title: 'Content Output Increase', amount: '340%' },
+    ]}
+  />
+
+  <!-- Testimonials Widget *********** -->
+  <Testimonials
+    title="What Our Case Study Participants Say"
+    testimonials={[
+      {
+        testimonial: 'WordRocket transformed our entire content strategy. We went from struggling to publish weekly to publishing daily with better quality than ever before.',
+        name: 'Sarah Johnson',
+        job: 'Content Director, Growth Marketing Inc.',
+        image: {
+          src: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
+          alt: 'Sarah Johnson Image',
+        },
+      },
+      {
+        testimonial: 'As a non-writer, I was intimidated by content marketing. WordRocket made it so simple that I actually enjoy creating content now.',
+        name: 'Michael Chen',
+        job: 'Founder, TechStartup',
+        image: {
+          src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
+          alt: 'Michael Chen Image',
+        },
+      },
+      {
+        testimonial: 'The ROI on WordRocket is incredible. We\'ve saved thousands on content creation while improving our results across the board.',
+        name: 'Emma Rodriguez',
+        job: 'SEO Specialist, Digital Solutions',
+        image: {
+          src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+          alt: 'Emma Rodriguez Image',
+        },
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Start Your Success Story',
+        href: 'https://app.wordrocket.ai/register',
+        target: '_blank',
+        icon: 'tabler:rocket',
+      },
+    ]}
+    title="Ready to Write Your Own Success Story?"
+    subtitle="Join hundreds of businesses and creators who are already transforming their content marketing with WordRocket. Your case study could be next."
+  />
+</Layout>

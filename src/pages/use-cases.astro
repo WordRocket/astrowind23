@@ -1,0 +1,236 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Use Cases - WordRocket AI Content Platform',
+  description: 'Discover how different industries and professionals use WordRocket for content marketing, SEO, blogging, and more. Find your perfect use case.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+  <HeroText
+    tagline="Use Cases"
+    title="WordRocket for Every Industry and Need"
+    subtitle="Discover how professionals across different industries are using WordRocket to solve their content challenges and achieve their marketing goals."
+  />
+
+  <!-- Features2 Widget ************** -->
+  <Features2
+    title="Industries We Serve"
+    subtitle="WordRocket adapts to your industry's unique content needs"
+    items={[
+      {
+        title: 'SaaS & Technology',
+        description: 'Create technical blog posts, product documentation, feature announcements, and thought leadership content that resonates with developers and decision-makers.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'E-commerce & Retail',
+        description: 'Generate product descriptions, buying guides, seasonal content, and SEO-optimized category pages that drive sales and improve search rankings.',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: 'Digital Marketing Agencies',
+        description: 'Scale content production for multiple clients with industry-specific templates and consistent quality across all campaigns.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Healthcare & Wellness',
+        description: 'Create authoritative health content, patient education materials, and wellness guides while maintaining accuracy and compliance.',
+        icon: 'tabler:heart',
+      },
+      {
+        title: 'Finance & Fintech',
+        description: 'Develop educational content about financial products, market analysis, and regulatory updates that build trust and authority.',
+        icon: 'tabler:currency-dollar',
+      },
+      {
+        title: 'Real Estate',
+        description: 'Generate neighborhood guides, market reports, property descriptions, and local SEO content that attracts buyers and sellers.',
+        icon: 'tabler:home',
+      },
+      {
+        title: 'Education & Training',
+        description: 'Create course materials, educational blog posts, tutorials, and learning resources that engage students and professionals.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Travel & Hospitality',
+        description: 'Produce destination guides, travel tips, hotel descriptions, and local attraction content that inspires and converts visitors.',
+        icon: 'tabler:plane',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+  <Content
+    isReversed
+    tagline="Content Marketing Teams"
+    title="Scale Your Content Operations"
+    items={[
+      {
+        title: 'Consistent Brand Voice',
+        description: 'Maintain your brand voice across all content with customizable templates and style guides.',
+        icon: 'tabler:microphone',
+      },
+      {
+        title: 'SEO Optimization',
+        description: 'Every piece of content is optimized for search engines with proper keyword placement and structure.',
+        icon: 'tabler:seo',
+      },
+      {
+        title: 'Bulk Content Creation',
+        description: 'Generate multiple articles simultaneously to meet aggressive publishing schedules.',
+        icon: 'tabler:stack-2',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      alt: 'Content Marketing Team',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Perfect for Marketing Teams</h3>
+      Transform your content marketing strategy with AI-powered efficiency while maintaining the quality your audience expects.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+  <Content
+    tagline="Solo Entrepreneurs"
+    title="Compete with Bigger Brands"
+    items={[
+      {
+        title: 'Professional Quality',
+        description: 'Create content that rivals what larger companies produce with their full marketing teams.',
+        icon: 'tabler:award',
+      },
+      {
+        title: 'Time Efficiency',
+        description: 'Focus on running your business while WordRocket handles your content marketing needs.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Cost Effective',
+        description: 'Get professional content without hiring expensive writers or agencies.',
+        icon: 'tabler:currency-dollar-off',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
+      alt: 'Solo Entrepreneur',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Built for Solo Success</h3>
+      Level the playing field with enterprise-quality content creation tools designed for individual entrepreneurs and small teams.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+  <Content
+    isReversed
+    tagline="Freelance Writers"
+    title="Enhance Your Writing Business"
+    items={[
+      {
+        title: 'Faster Research',
+        description: 'Use AI to quickly research topics and gather information for your articles.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Beat Writer\'s Block',
+        description: 'Get inspiration and overcome creative blocks with AI-generated outlines and ideas.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Scale Your Services',
+        description: 'Take on more clients by streamlining your writing process without sacrificing quality.',
+        icon: 'tabler:trending-up',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
+      alt: 'Freelance Writer',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Empower Your Writing</h3>
+      WordRocket doesn't replace writers—it makes them more productive, creative, and valuable to their clients.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Features2 Widget ************** -->
+  <Features2
+    title="Common Use Cases"
+    subtitle="See how WordRocket solves real content challenges"
+    items={[
+      {
+        title: 'Blog Content at Scale',
+        description: 'Generate multiple blog posts per week with consistent quality and SEO optimization.',
+        icon: 'tabler:article',
+      },
+      {
+        title: 'Product Launch Content',
+        description: 'Create comprehensive launch campaigns with announcements, guides, and promotional content.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Seasonal Marketing',
+        description: 'Quickly adapt content for holidays, seasons, and trending topics to stay relevant.',
+        icon: 'tabler:calendar-event',
+      },
+      {
+        title: 'Competitor Analysis',
+        description: 'Research competitor content and create better alternatives that outrank them.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Local SEO Content',
+        description: 'Generate location-specific content that helps businesses rank in local search results.',
+        icon: 'tabler:map-pin',
+      },
+      {
+        title: 'Technical Documentation',
+        description: 'Create clear, comprehensive documentation for products, APIs, and services.',
+        icon: 'tabler:file-text',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- CallToAction Widget *********** -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Find Your Use Case',
+        href: 'https://app.wordrocket.ai/register',
+        target: '_blank',
+        icon: 'tabler:rocket',
+      },
+    ]}
+    title="Ready to Transform Your Content Strategy?"
+    subtitle="No matter your industry or role, WordRocket has the tools and templates to help you create better content faster. Start your free trial today."
+  />
+</Layout>

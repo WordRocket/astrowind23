@@ -1,0 +1,98 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Content Templates - WordRocket AI Writing Platform',
+  description: 'Explore WordRocket\'s collection of AI-powered content templates. From SEO blog posts to product roundups, create professional content with ease.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+  <HeroText
+    tagline="Content Templates"
+    title="Professional Templates for Every Content Need"
+    subtitle="Choose from our growing collection of specialized templates designed to help you create high-quality, SEO-optimized content for any purpose."
+  />
+
+  <!-- Features2 Widget ************** -->
+  <Features2
+    title="All Templates"
+    subtitle="Choose a template to start creating professional long-form content"
+    items={[
+      {
+        title: 'All In One SEO Generator 2.0',
+        description: 'Complete SEO-optimized content with images, HTML elements, and internal links in one go. Our most popular template for comprehensive content creation.',
+        icon: 'tabler:seo',
+      },
+      {
+        title: 'Competitor Analyzer Template',
+        description: 'Generate content using SuperPrompts from competitor analysis. Understand what works in your niche and create better content.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Real-Time Blog Generator With Web Search',
+        description: 'Create current, well-researched articles with live web search integration. Perfect for trending topics and news-based content.',
+        icon: 'tabler:world-search',
+      },
+      {
+        title: 'Free SEO Blog Post Generator',
+        description: 'Generate SEO-optimized content using free AI models with perfect formatting and structure. Great for getting started.',
+        icon: 'tabler:article',
+      },
+      {
+        title: 'Deep Thinking Enabled Blog Generator',
+        description: 'Create thoughtful, detailed content using AI models that explicitly show their reasoning process for maximum quality.',
+        icon: 'tabler:brain',
+      },
+      {
+        title: 'Website Page Content Generator',
+        description: 'Generate high-converting, in-depth SEO-optimized content for various website pages including landing pages and service pages.',
+        icon: 'tabler:world-www',
+      },
+      {
+        title: 'Content Improver',
+        description: 'Enhance existing content with AI-powered improvements for SEO, readability, and engagement. Perfect for content optimization.',
+        icon: 'tabler:edit',
+      },
+      {
+        title: 'Product Round-up Generator',
+        description: 'Create comprehensive product comparison articles with detailed reviews and buyer\'s guides. Ideal for affiliate marketing.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Low AI Humanized Blog Posts',
+        description: 'Generate natural-sounding blog posts that don\'t feel AI-written using Google\'s Gemini 2.5 Pro model with advanced humanization.',
+        icon: 'tabler:user-check',
+      },
+      {
+        title: 'Bulk Blog Post Generator',
+        description: 'Generate multiple SEO-optimized blog posts efficiently in the background. Perfect for content agencies and high-volume creators.',
+        icon: 'tabler:stack-2',
+      },
+      {
+        title: 'Interactive Element Generator',
+        description: 'Create custom, interactive HTML elements like calculators, FAQs, and timelines for your website to boost engagement.',
+        icon: 'tabler:components',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Start Creating Content',
+        href: 'https://app.wordrocket.ai/register',
+        target: '_blank',
+        icon: 'tabler:rocket',
+      },
+    ]}
+    title="Ready to Create Amazing Content?"
+    subtitle="Join thousands of content creators who are already using WordRocket to scale their content production and improve their SEO rankings."
+  />
+</Layout>

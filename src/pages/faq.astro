@@ -1,0 +1,133 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'FAQ - WordRocket AI Content Platform',
+  description: 'Find answers to frequently asked questions about WordRocket, our AI content generation platform, pricing, features, and more.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+  <HeroText
+    tagline="FAQ"
+    title="Frequently Asked Questions"
+    subtitle="Find answers to common questions about WordRocket and how it can transform your content creation process."
+  />
+
+  <!-- FAQs Widget ******************* -->
+  <FAQs
+    title="General Questions"
+    items={[
+      {
+        title: 'What is WordRocket?',
+        description: 'WordRocket is an AI-powered content generation platform that helps you create high-quality, SEO-optimized content quickly and efficiently. It uses advanced AI models to generate blog posts, articles, product descriptions, and more with perfect formatting and structure.',
+      },
+      {
+        title: 'How does WordRocket work?',
+        description: 'Simply choose a template, enter your topic and requirements, and WordRocket generates professional content using AI. You can connect your own OpenRouter API key to access premium models like GPT-4 and Claude, or use our free models to get started.',
+      },
+      {
+        title: 'What makes WordRocket different from other AI writing tools?',
+        description: 'WordRocket focuses specifically on long-form, SEO-optimized content with specialized templates for different content types. Our "bring your own API" model gives you access to the latest AI models at cost, plus features like real-time web search and custom HTML elements.',
+      },
+      {
+        title: 'Do I need technical knowledge to use WordRocket?',
+        description: 'Not at all! WordRocket is designed for content creators, marketers, and business owners without technical backgrounds. Our interface is intuitive, and our templates guide you through the content creation process step by step.',
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+  <FAQs
+    title="Features & Capabilities"
+    items={[
+      {
+        title: 'What types of content can I create with WordRocket?',
+        description: 'WordRocket supports various content types including SEO blog posts, product roundups, website pages, social media content, email newsletters, product descriptions, and more. Our template library is constantly expanding based on user needs.',
+      },
+      {
+        title: 'How does WordRocket\'s SEO optimization work?',
+        description: 'WordRocket automatically optimizes content for search engines by incorporating target keywords naturally, creating proper heading structures, generating meta descriptions, and following SEO best practices. Each template is designed with SEO in mind.',
+      },
+      {
+        title: 'Can I customize the generated content?',
+        description: 'Absolutely! WordRocket generates content as a starting point that you can edit, customize, and refine. You can adjust the tone, add your own insights, modify sections, and ensure the content perfectly matches your brand voice.',
+      },
+      {
+        title: 'What is the real-time web search feature?',
+        description: 'Our web search integration allows WordRocket to research current information, statistics, and trends while generating content. This ensures your articles are up-to-date and factually accurate, especially important for news and trending topics.',
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+  <FAQs
+    title="Pricing & API"
+    items={[
+      {
+        title: 'How much does WordRocket cost?',
+        description: 'WordRocket is currently free during our beta period. You only pay for AI model usage through your OpenRouter API account. This typically costs $0.05-0.30 per article depending on the model you choose. We also offer free AI models for basic content generation.',
+      },
+      {
+        title: 'What is OpenRouter and why do I need it?',
+        description: 'OpenRouter is a service that provides access to multiple AI models (GPT-4, Claude, Gemini, etc.) through a single API. Using your own API key gives you better pricing, more control, and access to the latest models. It\'s optional - you can also use our free models.',
+      },
+      {
+        title: 'How many words can I generate with each plan?',
+        description: 'There are no word limits on WordRocket\'s side. Your only limit is your API budget with OpenRouter. For free models, you can generate unlimited content. This gives you complete control over your content production costs and volume.',
+      },
+      {
+        title: 'What happens if I exceed my API limits?',
+        description: 'API limits are managed by OpenRouter, not WordRocket. If you reach your OpenRouter limit, you can increase it in your OpenRouter dashboard. WordRocket will show you estimated costs before generating content so you stay in control.',
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+  <FAQs
+    title="Technical & Support"
+    items={[
+      {
+        title: 'Does WordRocket support multiple languages?',
+        description: 'Yes! WordRocket can generate content in multiple languages depending on the AI model you use. GPT-4 and Claude support dozens of languages, while our templates can be adapted for different markets and regions.',
+      },
+      {
+        title: 'Can I integrate WordRocket with my existing workflow?',
+        description: 'WordRocket generates content that you can easily copy and paste into your CMS, blog platform, or content management system. We\'re working on direct integrations with popular platforms based on user feedback.',
+      },
+      {
+        title: 'What kind of support do you offer?',
+        description: 'We provide email support, comprehensive documentation, video tutorials, and a community forum. Beta users get priority support and direct access to our team for feedback and feature requests.',
+      },
+      {
+        title: 'How do you ensure content quality and originality?',
+        description: 'WordRocket generates original content using AI models trained on diverse datasets. Each piece is unique and created specifically for your prompts. We recommend reviewing and editing generated content to ensure it meets your standards and brand voice.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get Started Now',
+        href: 'https://app.wordrocket.ai/register',
+        target: '_blank',
+        icon: 'tabler:rocket',
+      },
+      {
+        variant: 'secondary',
+        text: 'Contact Support',
+        href: 'mailto:support@wordrocket.ai',
+        icon: 'tabler:mail',
+      },
+    ]}
+    title="Still Have Questions?"
+    subtitle="Can't find the answer you're looking for? Our support team is here to help you get the most out of WordRocket."
+  />
+</Layout>
