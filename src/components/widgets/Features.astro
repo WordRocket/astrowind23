@@ -1,7 +1,8 @@
 ---
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
-import ItemGrid from '~/components/ui/ItemGrid.astro';
 import Headline from '~/components/ui/Headline.astro';
+import Button from '~/components/ui/Button.astro';
+import { Icon } from 'astro-icon/components';
 import type { Features as Props } from '~/types';
 
 const {
@@ -24,9 +25,9 @@ const {
   <Headline title={title} subtitle={subtitle} tagline={tagline} classes={classes?.headline as Record<string, string>} />
   <div class="modern-grid-3">
     {items && items.map((item, index) => (
-      <div class={`modern-card p-6 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-slide-up stagger-${Math.min(index + 1, 6)}`}>
+      <div class={`modern-card p-6 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-slide-up`} style={`animation-delay: ${(index + 1) * 0.1}s`}>
         <div class="flex items-start space-x-4">
-          <div class="icon-container-large flex-shrink-0">
+          <div class="icon-container-large flex-shrink-0 bg-primary-500/20 border-primary-500/30">
             <Icon name={item.icon || defaultIcon} class="w-8 h-8 text-primary-400" />
           </div>
           <div class="flex-1">

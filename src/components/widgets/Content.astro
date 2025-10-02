@@ -56,8 +56,8 @@ const {
 
         <div class="space-y-6">
           {items && items.map((item, index) => (
-            <div class={`flex items-start space-x-4 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-slide-left stagger-${Math.min(index + 1, 6)}`}>
-              <div class="icon-container flex-shrink-0 bg-success/20 border-success/30">
+            <div class={`flex items-start space-x-4 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-slide-left`} style={`animation-delay: ${(index + 1) * 0.1}s`}>
+              <div class="icon-container flex-shrink-0 bg-green-500/20 border-green-500/30">
                 <Icon name={item.icon || "tabler:check"} class="w-5 h-5 text-success" />
               </div>
               <div>
