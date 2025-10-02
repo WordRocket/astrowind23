@@ -43,32 +43,32 @@ const {
   />
   <div class="mx-auto max-w-7xl p-4 md:px-8">
     <div class={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16`}>
-      <div class="md:basis-1/2 self-center">
+      <div class="md:basis-1/2 self-center intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-slide-left">
         {content && <div class="mb-12 text-lg dark:text-slate-400" set:html={content} />}
 
         {
           callToAction && (
-            <div class="mt-[-40px] mb-8 text-primary">
-              <Button variant="link" {...callToAction} />
+            <div class="mt-[-40px] mb-8">
+              <Button variant="link" {...callToAction} class="text-primary-400 hover:text-primary-300 font-semibold" />
             </div>
           )
         }
 
-        <ItemGrid
-          items={items}
-          columns={columns}
-          defaultIcon="tabler:check"
-          classes={{
-            container: `gap-y-4 md:gap-y-8`,
-            panel: 'max-w-none',
-            title: 'text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2',
-            description: 'text-muted dark:text-slate-400 ml-2 rtl:ml-0 rtl:mr-2',
-            icon: 'flex h-7 w-7 items-center justify-center rounded-full bg-green-600 dark:bg-green-700 text-gray-50 p-1',
-            action: 'text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2',
-          }}
-        />
+        <div class="space-y-6">
+          {items && items.map((item, index) => (
+            <div class={`flex items-start space-x-4 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-slide-left stagger-${Math.min(index + 1, 6)}`}>
+              <div class="icon-container flex-shrink-0 bg-success/20 border-success/30">
+                <Icon name={item.icon || "tabler:check"} class="w-5 h-5 text-success" />
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold text-white mb-2">{item.title}</h4>
+                <p class="text-slate-300 leading-relaxed" set:html={item.description} />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-      <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
+      <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-slide-right">
         {
           image && (
             <div class="relative m-auto max-w-4xl">
@@ -76,7 +76,7 @@ const {
                 <Fragment set:html={image} />
               ) : (
                 <Image
-                  class="mx-auto w-full rounded-lg bg-gray-500 shadow-lg"
+                  class="mx-auto w-full rounded-2xl shadow-2xl border border-white/10 interactive-hover"
                   width={500}
                   height={500}
                   widths={[400, 768]}

@@ -22,31 +22,29 @@ const {
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
 
-  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
     {
       testimonials &&
         testimonials.map(({ title, testimonial, name, job, image }) => (
-          <div class="flex h-auto intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter">
-            <div class="flex flex-col p-4 md:p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-600">
-              {title && <h2 class="text-lg font-medium leading-6 pb-4">{title}</h2>}
+          <div class="flex h-auto intersect-once motion-safe:md:intersect:animate-slide-up motion-safe:md:opacity-0 intersect-quarter">
+            <div class="testimonial-card flex flex-col w-full">
+              {title && <h3 class="text-xl font-semibold leading-6 pb-4 text-white">{title}</h3>}
               {testimonial && (
-                <blockquote class="flex-auto">
-                  <p class="text-muted">" {testimonial} "</p>
+                <blockquote class="flex-auto mb-6">
+                  <p class="text-slate-300 text-lg leading-relaxed italic">" {testimonial} "</p>
                 </blockquote>
               )}
 
-              <hr class="border-slate-200 dark:border-slate-600 my-4" />
-
-              <div class="flex items-center">
+              <div class="flex items-center mt-auto">
                 {image && (
-                  <div class="h-10 w-10 rounded-full border border-slate-200 dark:border-slate-600">
+                  <div class="h-12 w-12 rounded-full border-2 border-primary-500/30 overflow-hidden">
                     {typeof image === 'string' ? (
                       <Fragment set:html={image} />
                     ) : (
                       <Image
-                        class="h-10 w-10 rounded-full border border-slate-200 dark:border-slate-600 min-w-full min-h-full"
-                        width={40}
-                        height={40}
+                        class="h-12 w-12 rounded-full object-cover"
+                        width={48}
+                        height={48}
                         widths={[400, 768]}
                         layout="fixed"
                         {...image}
@@ -55,9 +53,9 @@ const {
                   </div>
                 )}
 
-                <div class="grow ml-3 rtl:ml-0 rtl:mr-3">
-                  {name && <p class="text-base font-semibold">{name}</p>}
-                  {job && <p class="text-xs text-muted">{job}</p>}
+                <div class="grow ml-4 rtl:ml-0 rtl:mr-4">
+                  {name && <p class="text-base font-semibold text-white">{name}</p>}
+                  {job && <p class="text-sm text-slate-400">{job}</p>}
                 </div>
               </div>
             </div>

@@ -22,15 +22,24 @@ const {
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-5xl ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} classes={classes?.headline as Record<string, string>} />
-  <ItemGrid
-    items={items}
-    columns={columns}
-    defaultIcon={defaultIcon}
-    classes={{
-      container: '',
-      title: 'md:text-[1.3rem]',
-      icon: 'text-white bg-primary rounded-full w-10 h-10 p-2 md:w-12 md:h-12 md:p-3 mr-4 rtl:ml-4 rtl:mr-0',
-      ...((classes?.items as Record<string, never>) ?? {}),
-    }}
-  />
+  <div class="modern-grid-3">
+    {items && items.map((item, index) => (
+      <div class={`modern-card p-6 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-slide-up stagger-${Math.min(index + 1, 6)}`}>
+        <div class="flex items-start space-x-4">
+          <div class="icon-container-large flex-shrink-0">
+            <Icon name={item.icon || defaultIcon} class="w-8 h-8 text-primary-400" />
+          </div>
+          <div class="flex-1">
+            <h3 class="text-xl font-semibold text-white mb-3">{item.title}</h3>
+            <p class="text-slate-300 leading-relaxed" set:html={item.description} />
+            {item.callToAction && (
+              <div class="mt-4">
+                <Button variant="link" {...item.callToAction} class="text-primary-400 hover:text-primary-300" />
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
 </WidgetWrapper>

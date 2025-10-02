@@ -20,14 +20,19 @@ const {
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
-  <ItemGrid
-    items={items}
-    columns={columns}
-    defaultIcon="tabler:chevron-right"
-    classes={{
-      container: `${columns === 1 ? 'max-w-4xl' : ''} gap-y-8 md:gap-y-12`,
-      panel: 'max-w-none',
-      icon: 'flex-shrink-0 mt-1 w-6 h-6 text-primary',
-    }}
-  />
+  <div class="max-w-4xl mx-auto space-y-4">
+    {items && items.map((item, index) => (
+      <div class={`faq-item intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-slide-up stagger-${Math.min(index + 1, 6)}`}>
+        <div class="flex items-start space-x-4">
+          <div class="icon-container flex-shrink-0 bg-primary-500/20 border-primary-500/30">
+            <Icon name="tabler:help-circle" class="w-5 h-5 text-primary-400" />
+          </div>
+          <div class="flex-1">
+            <h3 class="text-xl font-semibold text-white mb-3">{item.title}</h3>
+            <p class="text-slate-300 leading-relaxed" set:html={item.description} />
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
 </WidgetWrapper>
